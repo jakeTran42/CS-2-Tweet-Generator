@@ -1,29 +1,28 @@
-# import random
-
-# def dictionary(num):
-#     with open('/usr/share/dict/words', 'w') as f:
-        
 import random
 import sys
 
-def generate_random_sentence(input_number):
-    with open('/usr/share/dict/words', 'r') as f:
-        number_of_words = input_number
-        # sentence = []
-        all_words = f.readlines()
-        all_words_array = list(all_words)
-        output = []
-        for index in all_words_array:
-            word = index.replace('\n', '')
-            output.append(word)
 
-        sentence_array = []
-        for index in range(int(number_of_words)):
-            rand_num = random.randint(0, len(output) - 1)
-            sentence_array.append(output[rand_num])
+def dictionary(input):
+    with open("/usr/share/dict/words", 'r') as f:
+        #Reading files and creating a list
+        read_text = f.read()
+        dictionary_list = list(read_text.split("\n"))
 
-        sentence = ' '.join(sentence_array)
+    num_of_word = input
+
+    sentence_list = []
+
+    #Loop through input of num + append random word to a list/array called sentence_list
+    for index in range(int(num_of_word)):
+        word_index = random.randint(0, len(dictionary_list) - 1)
+        sentence_list.append(dictionary_list[word_index])
+    
+    return sentence_list
 
 
 
-        return sentence
+if __name__ == '__main__':
+    user_input = sys.argv[1:]
+    # new_input = int(user_input)
+    sentence = dictionary(int(user_input[0])
+    print(sentence)
