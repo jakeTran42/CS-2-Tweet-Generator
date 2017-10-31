@@ -5,6 +5,7 @@
 *.DS_Store
 .AppleDouble
 .LSOverride
+.notes.py
 
 # Icon must end with two \r
 Icon
