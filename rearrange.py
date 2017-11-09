@@ -16,7 +16,9 @@ def create_random_quote():
             counter += 1
     return word
 
+quote = ' '.join(create_random_quote())
+
 if __name__ == '__main__':
-    quote = create_random_quote()
-    # quote = ' '.join(quote)
+    # quote = create_random_quote()
+    quotes = ' '.join(quote)
     print(quote)

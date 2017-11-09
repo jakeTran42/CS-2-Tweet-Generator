@@ -1,18 +1,12 @@
-import random
+dictionary = {}
 
-'''
-num_list = []
-count = 0
+array = ['one', 'two', 'three', 'dour', 'five']
 
-while count < 10:
-    num = random.randint(0, 10)
-    if num not in num_list:
-        num_list.append(num)
-        count += 1
+for _ in array:
+    dictionary[_] = 4
 
-print(num_list)
-'''
+for _ in dictionary:
+    if dictionary[_] == 4:
+        dictionary[_] += 170
 
-with open('/usr/share/dict/words', 'r') as f:
-    all_words = f.readlines()
-    print(all_words)
+print(dictionary)
